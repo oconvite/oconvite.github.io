@@ -35,7 +35,7 @@
 html{ font-size: 100%; height: 100%; overflow-x: hidden;margin: 0px;  padding: 0px; touch-action: manipulation; }
 
 
-body{ font-size: 16px; font-family: 'Bitter', serif; width: 100%; height: 100%; margin: 0; font-weight: 400;
+body{ font-size: 16px; font-family: 'Bitter', sans-serif; width: 100%; height: 100%; margin: 0; font-weight: 400;
 	-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-wrap: break-word; 
 	color: #333; }
 
@@ -320,3 +320,139 @@ footer .email-area .submit-btn:hover{ background: #000; color: #E55D73; }
 
 
 footer .copyright{ padding: 20px 0 30px; }
+
+		.owl-carousel {
+		  position: relative; }
+		  .owl-carousel .owl-item {
+		    opacity: .4; }
+		    .owl-carousel .owl-item.active {
+		      opacity: 1; }
+		  .owl-carousel .owl-dots {
+		    text-align: center;
+		    margin-top: 20px; }
+		    .owl-carousel .owl-dots .owl-dot {
+		      width: 10px;
+		      height: 10px;
+		      margin: 5px;
+		      border-radius: 50%;
+		      background: #e6e6e6;
+		      position: relative; }
+		      .owl-carousel .owl-dots .owl-dot:after {
+		        position: absolute;
+		        top: -2px;
+		        left: -2px;
+		        right: 0;
+		        bottom: 0;
+		        width: 14px;
+		        height: 14px;
+		        content: '';
+		        border: 1px solid rgba(255, 255, 255, 0.3);
+		        -webkit-border-radius: 50%;
+		        -moz-border-radius: 50%;
+		        -ms-border-radius: 50%;
+		        border-radius: 50%; }
+		      .owl-carousel .owl-dots .owl-dot:hover, .owl-carousel .owl-dots .owl-dot:focus {
+		        outline: none !important; }
+		      .owl-carousel .owl-dots .owl-dot.active {
+		        background: #f67e7d; }
+		.testimony-wrap {
+		  display: block;
+		  position: relative;
+		  background: #f3f3f3;
+		  padding: 0 20px;
+		  border: 1px solid rgba(0, 0, 0, 0.02);
+		  -webkit-box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
+		  -moz-box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
+		  box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
+		  -webkit-border-radius: 5px;
+		  -moz-border-radius: 5px;
+		  -ms-border-radius: 5px;
+		  border-radius: 5px; }
+		  .testimony-wrap .user-img {
+		    width: 80px;
+		    height: 80px;
+		    position: relative;
+		    -webkit-border-radius: 50%;
+		    -moz-border-radius: 50%;
+		    -ms-border-radius: 50%;
+		    border-radius: 50%; }
+		  .testimony-wrap .name {
+		    font-weight: 500;
+		    font-size: 20px;
+		    margin-bottom: 0;
+		    color: #000000; }
+		  .testimony-wrap .position {
+		    font-size: 16px;
+		    color: #a29e9e; }
+.badge-default {
+  background-color: #636c72;
+  border-color: #636c72;
+}
+.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+a.bg-secondary:hover, a.bg-secondary:focus,
+button.bg-secondary:hover,
+button.bg-secondary:focus {
+  background-color: #545b62 !important;
+}
+.btn-secondary {
+  color: #ffffff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  color: #ffffff;
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+.btn-secondary:focus, .btn-secondary.focus {
+  box-shadow: none, 0 0 0 0 rgba(130, 138, 145, 0.5);
+}
+
+.btn-secondary.disabled, .btn-secondary:disabled {
+  color: #ffffff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  color: #ffffff;
+  background-color: #545b62;
+  border-color: #4e555b;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0 rgba(130, 138, 145, 0.5);
+}
+
+
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #c12e2a;
+}
+
+.btn-danger:focus, .btn-danger.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(217, 83, 79, 0.5);
+          box-shadow: 0 0 0 2px rgba(217, 83, 79, 0.5);
+}
+
+.cart{
+	border: 1px solid #dee2e6;
+	border-radius: 50%;
+	padding: 24px;
+	font-size: 24px;
+}
