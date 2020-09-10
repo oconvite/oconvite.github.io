@@ -231,13 +231,13 @@ function initMap() {
 	// Create a map object, and include the MapTypeId to add
 	// to the map type control.
 
-	var uluru = {lat: 56.946285, lng: 24.105078};
+	var uluru = {lat: -25.95484683, lng: 32.60920018};
     var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 4,
 		center: uluru
     });
 		
-	var image = 'images/google-marker.png';
+	var image = 'assets/images/google-marker.png';
 	var marker = new google.maps.Marker({
 		position: uluru,
 		map: map,

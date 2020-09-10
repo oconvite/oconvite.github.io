@@ -16,7 +16,12 @@
 	<link href="assets/02-rsvp/css/responsive.css" rel="stylesheet">
 	<link href="assets/css/owl.carousel.min.css" rel="stylesheet">
 	<link href="assets/css/owl.theme.default.min.css" rel="stylesheet">
-	
+		<style>
+      #mapGoogle {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
 </head>
 <body>
 	
@@ -34,7 +39,7 @@
 				<li><a href="gallery.html">GALERIA</a></li>
 				<li><a href="messages.html">FELICITAÇÕES</a></li>
 				<li><a href="presence.html">CONFIRMAR PRESENCA</a></li>
-				<li><a href="present.html">PRESENTES</a></li>
+				<li><a href="presents.html">PRESENTES</a></li>
 			</ul><!-- main-menu -->
 			
 		</div><!-- container -->
@@ -53,7 +58,7 @@
 	</div><!-- main-slider -->
 	
 	
-		<section class="section center-text">
+	<section class="section center-text">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -63,7 +68,7 @@
 					</div>
 					<div class="row ">
 			          <div class="col-md-12">
-			            <div class="carousel-testimony owl-carousel text-left bg-secondary">
+			            <div class="carousel-testimony owl-carousel text-left">
 				              <div class="item">
 				                <div class="testimony-wrap py-4">
 				                  <div class="text">
@@ -71,7 +76,7 @@
 				                    	Felicidades aos noivos. Desejo todo de bom e que Deus esteja sempre presente na vossa vida. Vôces são um exemplo para todos nós.
 				                    </p>
 				                    <div class="d-flex align-items-center">
-				                    	<div class="user-img" style="background-image: url('assets/images/action-1-1600x600.jpg')"></div>
+				                    	<div class="user-img" style="background-image: url('assets/images/messages/user1.jpg')"></div>
 				                    	<div class="pl-3">
 						                    <p class="name">Allan Senger</p>
 						                  </div>
@@ -86,7 +91,7 @@
 				                    	Parabéns aos pombinhos, espero que tenham muitos filhos, muito amor e acima de tudo muita compressão voces merecem.
 				                    </p>
 				                    <div class="d-flex align-items-center">
-				                    	<div class="user-img" style="background-image: url('assets/images/action-1-1600x600.jpg')"></div>
+				                    	<div class="user-img" style="background-image: url('assets/images/messages/user2.jpg')"></div>
 				                    	<div class="pl-3">
 						                    <p class="name">Reina Caroll</p>
 						                  </div>
@@ -101,7 +106,7 @@
 				                    	Vôces são um exemplo para mim, e nada melhor que felicitar aos noivos mais lindos, simpáticos agradáveis que conheço. Beijos e felicidades.
 				                    </p>
 				                    <div class="d-flex align-items-center">
-				                    	<div class="user-img" style="background-image: url('assets/images/action-1-1600x600.jpg')"></div>
+				                    	<div class="user-img" style="background-image: url('assets/images/messages/user3.jpg')"></div>
 				                    	<div class="pl-3">
 						                    <p class="name">Myah Connelly</p>
 						                  </div>
@@ -158,7 +163,7 @@
 			</div><!-- row -->
 		</div><!-- container -->
 	</section><!-- section -->
-		
+	<div id="mapGoogle"></div>	
 	<footer>
 		<div class="container center-text">
 			
@@ -192,7 +197,7 @@
 				<li><a href="gallery.html">GALERIA</a></li>
 				<li><a href="messages.html">FELICITAÇÕES</a></li>
 				<li><a href="presence.html">CONFIRMAR PRESENCA</a></li>
-				<li><a href="present.html">PRESENTES</a></li>
+				<li><a href="presents.html">PRESENTES</a></li>
 			</ul>
 			
 			<p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -288,6 +293,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
 
 		})(jQuery);
 	</script>
+	<script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        var uluru = {lat: -25.9549955, lng: 32.6083642};
+
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('mapGoogle'), {zoom: 15, center: uluru});
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({position: uluru, map: map});
+      }
+    </script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu8KjywTN5exku5EKgraBqWdSQD0JCwS0&callback=initMap"></script>
 	
 </body>
 </html>

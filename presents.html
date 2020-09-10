@@ -19,9 +19,15 @@
 	<link href="assets/css/all.css" rel="stylesheet">
 	<style type="text/css">
 		select.form-control:not([size]):not([multiple]) {
-		  height: calc(2.95rem + 2px);
+		  height: calc(2.35rem + 2px);
 		}
-
+		#imagem{
+		   width: 195px !important;
+		   margin-top: -29px !important;
+		}
+		.btn {
+   			 padding: 9px 30px;
+		}
 	</style>
 	
 </head>
@@ -39,14 +45,14 @@
 				<li><a href="gallery.html">GALERIA</a></li>
 				<li><a href="messages.html">FELICITAÇÕES</a></li>
 				<li><a href="presence.html">CONFIRMAR PRESENCA</a></li>
-				<li><a href="present.html">PRESENTES</a></li>
+				<li><a href="presents.html">PRESENTES</a></li>
 			</ul><!-- main-menu -->
 			
 		</div><!-- container -->
 	</header>
 	
 	
-	<div class="main-slider">
+<div class="main-slider">
 		<div class="display-table center-text">
 			<div class="display-table-cell">
 				<div class="slider-content">
@@ -59,8 +65,7 @@
 	</div><!-- main-slider -->
 	
 	<section class="section  center-text">
-
-		<div class="container-fluid">
+				<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="heading">
@@ -73,191 +78,110 @@
 		</div>
 		<div class="container">
 			<hr>
-			<div class="row d-flex justify-content-between text-left px-5">
-				<div class="col-sm-6">
-					<form id="form">
-						<div class="form-group">
-							<label for="categoria">Categoria:</label>
-							<select class="form-control" id="categoria" name="categoria">
-								<option class="p-4" selected>Todas</option>
-								<option>Utensilios para cozinha</option>
-								<option>Vestuario (para bebe)</option>
-								<option>Electronicos</option>
-							</select>
+				<form method="POST" action="#" accept-charset="UTF-8"><input name="_token" type="hidden" value="8wFsZEv3kqEh0HOMMF800QQ3f4tbyqcXg68hs9Jx">
+					<div class="row d-flex justify-content-between text-left px-5">
+						<input type="hidden" name="present_search" value="1">
+						<div class="col-sm-6">
+							<label for="category_id">Categoria:</label>
+							<div class="form-group">
+								<select class="form-control custom-select" id="category_id" name="category_id"><option value="" selected="selected">Selecionar</option><option value="1">Utensilios para cozinha</option><option value="2">Mobilia</option><option value="3">Viagens e Lua de Mel</option></select>			
+							</div>
 						</div>
-					</form>
-				</div>
-				<div class="col-sm-6">
-					<form id="form">
-						<label>Pesquisar</label>
-						<div class="form-group d-flex">
-							<input class="form-control" type="text" name="pesquisar" id="pesquisar" placeholder="Presente">
-							<button class="btn btn-sm btn-primary">Pesquisar</button>
+						<div class="col-sm-6">
+							<label for="search">Pesquisar</label>
+							<div class="form-group d-flex">
+								<input class="form-control" required name="search" type="text" id="search">
+								<input class="btn btn-sm btn-primary" type="submit" value="Pesquisar">
+							</div>		
 						</div>
-					</form>
-				</div>
-			</div>
+					</div>
+				</form>
 			<hr>
 		</div>
-		
+
 		<div class="container-fluid">
+			
 			<div class="row px-5">
-				<div class="col-sm-12 text-left my-4">
-					<div class="bg-secondary py-2 px-4">
-						<h5 class="text-white">Utensilios para cozinha</h5>
+														<div class="col-sm-12 text-left my-4">
+						<div class="bg-secondary py-2 px-3">
+							<h6 class="text-white">Utensilios para cozinha</h6>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 mb-4">
-					<a href="#"><img class="margin-bottom" src="assets/images/ralador.jpg" alt="Gallery Image"></a>
-                    <h5 class="py-1" style="border: 1px solid #5bc0de;">Ralador 4 Faces</h5>
-                    <a href="#" class="btn btn-sm btn-secondary my-4">Selecionar</a>
-				</div><!-- col-sm-4 -->
-				<div class="col-md-3 col-sm-6 mb-4">
-					<a href="#"><img class="margin-bottom" src="assets/images/toradeira.jpg" alt="Gallery Image"></a>
-                    <h5 class="py-1" style="border: 1px solid #5bc0de;">Torradeira Square Retro</h5>
-                    <a href="#" class="btn btn-sm btn-secondary my-4">Selecionar</a>
-				</div><!-- col-sm-4 -->
-				<div class="col-md-3 col-sm-6 mb-4">
-					<a href="#"><img class="margin-bottom" src="assets/images/liquidificador.jpg" alt="Gallery Image"></a>
-                    <h5 class="py-1" style="border: 1px solid #5bc0de;">Liquidificador</h5>
-                    <a href="#" class="btn btn-sm btn-secondary my-4">Selecionar</a>
-				</div><!-- col-sm-4 -->
-				<div class="col-md-3 col-sm-6 mb-4">
-					<a href="#"><img class="margin-bottom" src="assets/images/cafetaria.jpg" alt="Gallery Image"></a>
-                    <h5 class="py-1" style="border: 1px solid #5bc0de;">Cafeteira Flavor Programável</h5>
-                    <a href="#" class="btn btn-sm btn-secondary disabled my-4">Selecionado</a>
-				</div><!-- col-sm-4 -->
-			</div>
-			<div class="row px-5">
-				<div class="col-sm-12 text-left my-4">
-					<div class="bg-secondary py-2 px-4">
-						<h5 class="text-white">Vestuario (para bebe)</h5>
+										<div class="col-md-3 col-sm-6 mb-4">
+						<a href="assets/images/present/1599495127CMeECvqZMMUgi8Zh.jpg" data-fluidbox><img class="margin-bottom" src="assets/images/present/1599495127CMeECvqZMMUgi8Zh.jpg" alt="Gallery Image"></a>
+	                    <h6 class="py-1 mb-3" style="border: 1px solid #5bc0de;">Cafeteira Elétrica 30 xícaras</h6>
+	                    	                    	<a href="http://127.0.0.1:8000/cart/add/2" class="btn btn-sm btn-secondary">Selecionar</a>
+	                    					</div><!-- col-sm-4 -->
+										<div class="col-md-3 col-sm-6 mb-4">
+						<a href="assets/images/present/1599495100KE2b3yjkx75FvqXR.jpg" data-fluidbox><img class="margin-bottom" src="assets/images/present/1599495100KE2b3yjkx75FvqXR.jpg" alt="Gallery Image"></a>
+	                    <h6 class="py-1 mb-3" style="border: 1px solid #5bc0de;">Torradeira 7 níveis de tostagem</h6>
+	                    	                    	<a href="http://127.0.0.1:8000/cart/add/7" class="btn btn-sm btn-secondary">Selecionar</a>
+	                    					</div><!-- col-sm-4 -->
+										<div class="col-md-3 col-sm-6 mb-4">
+						<a href="assets/images/present/1599495198Rn8NHZwgRPZxNQ5t.jpg" data-fluidbox><img class="margin-bottom" src="assets/images/present/1599495198Rn8NHZwgRPZxNQ5t.jpg" alt="Gallery Image"></a>
+	                    <h6 class="py-1 mb-3" style="border: 1px solid #5bc0de;">Espremedor de Frutas 900watts</h6>
+	                    	                    	<a href="http://127.0.0.1:8000/cart/add/8" class="btn btn-sm btn-secondary">Selecionar</a>
+	                    					</div><!-- col-sm-4 -->
+										<div class="col-md-3 col-sm-6 mb-4">
+						<a href="assets/images/present/1599495331MoKSmpS8xpqq8TId.jpg" data-fluidbox><img class="margin-bottom" src="assets/images/present/1599495331MoKSmpS8xpqq8TId.jpg" alt="Gallery Image"></a>
+	                    <h6 class="py-1 mb-3" style="border: 1px solid #5bc0de;">Liquidificador 5 velocidades</h6>
+	                    	                    	<a href="http://127.0.0.1:8000/cart/add/9" class="btn btn-sm btn-secondary">Selecionar</a>
+	                    					</div><!-- col-sm-4 -->
+								
+						
+										<div class="col-sm-12 text-left my-4">
+						<div class="bg-secondary py-2 px-3">
+							<h6 class="text-white">Mobilia</h6>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 mb-4">
-					<a href="#"><img class="margin-bottom" src="assets/images/camisas.webp" alt="Gallery Image"></a>
-                    <h5 class="py-1" style="border: 1px solid #5bc0de;">Camisas</h5>
-                    <a href="#" class="btn btn-sm btn-secondary my-4">Selecionar</a>
-				</div><!-- col-sm-4 -->
-				<div class="col-md-3 col-sm-6 mb-4">
-					<a href="#"><img class="margin-bottom" src="assets/images/calcas.webp" alt="Gallery Image"></a>
-                    <h5 class="py-1" style="border: 1px solid #5bc0de;">Calsas</h5>
-                    <a href="#" class="btn btn-sm btn-secondary my-4">Selecionar</a>
-				</div><!-- col-sm-4 -->
-				<div class="col-md-3 col-sm-6 mb-4">
-					<a href="#"><img class="margin-bottom" src="assets/images/meias.jpg" alt="Gallery Image"></a>
-                    <h5 class="py-1" style="border: 1px solid #5bc0de;">Meias</h5>
-                    <a href="#" class="btn btn-sm btn-secondary my-4">Selecionar</a>
-				</div><!-- col-sm-4 -->
-				<div class="col-md-3 col-sm-6 mb-4">
-					<a href="#"><img class="margin-bottom" src="assets/images/roupas pra dormir.webp" alt="Gallery Image"></a>
-                    <h5 class="py-1" style="border: 1px solid #5bc0de;">Roupas para dormir</h5>
-                    <a href="#" class="btn btn-sm btn-secondary disabled my-4">Selecionado</a>
-				</div><!-- col-sm-4 -->
-			</div>
-			<div class="row px-5">
-				<div class="col-sm-12 text-left my-4">
-					<div class="bg-secondary py-2 px-4">
-						<h5 class="text-white">Electronicos</h5>
+										<div class="col-md-3 col-sm-6 mb-4">
+						<a href="assets/images/present/1599495511aF0NWqar8YbIbvMt.jpg" data-fluidbox><img class="margin-bottom" src="assets/images/present/1599495511aF0NWqar8YbIbvMt.jpg" alt="Gallery Image"></a>
+	                    <h6 class="py-1 mb-3" style="border: 1px solid #5bc0de;">Cama Box de Solteiro</h6>
+	                    	                    	<a href="http://127.0.0.1:8000/cart/add/11" class="btn btn-sm btn-secondary">Selecionar</a>
+	                    					</div><!-- col-sm-4 -->
+										<div class="col-md-3 col-sm-6 mb-4">
+						<a href="assets/images/present/1599495545GSAWuMCWLOJhfgW4.jpg" data-fluidbox><img class="margin-bottom" src="assets/images/present/1599495545GSAWuMCWLOJhfgW4.jpg" alt="Gallery Image"></a>
+	                    <h6 class="py-1 mb-3" style="border: 1px solid #5bc0de;">Rack para Sala de TV</h6>
+	                    	                    	<a href="http://127.0.0.1:8000/cart/add/12" class="btn btn-sm btn-secondary">Selecionar</a>
+	                    					</div><!-- col-sm-4 -->
+										<div class="col-md-3 col-sm-6 mb-4">
+						<a href="assets/images/present/159949561133zMDGiju7IwuPA4.jpg" data-fluidbox><img class="margin-bottom" src="assets/images/present/159949561133zMDGiju7IwuPA4.jpg" alt="Gallery Image"></a>
+	                    <h6 class="py-1 mb-3" style="border: 1px solid #5bc0de;">Cadeiras 6 unidades</h6>
+	                    	                    	<a href="http://127.0.0.1:8000/cart/add/13" class="btn btn-sm btn-secondary">Selecionar</a>
+	                    					</div><!-- col-sm-4 -->
+										<div class="col-md-3 col-sm-6 mb-4">
+						<a href="assets/images/present/1599495656KXyNg1Dv7HvGYJhi.jpg" data-fluidbox><img class="margin-bottom" src="assets/images/present/1599495656KXyNg1Dv7HvGYJhi.jpg" alt="Gallery Image"></a>
+	                    <h6 class="py-1 mb-3" style="border: 1px solid #5bc0de;">Cama Box de Casal</h6>
+	                    	                    	<a href="http://127.0.0.1:8000/cart/add/14" class="btn btn-sm btn-secondary">Selecionar</a>
+	                    					</div><!-- col-sm-4 -->
+								
+						
+										<div class="col-sm-12 text-left my-4">
+						<div class="bg-secondary py-2 px-3">
+							<h6 class="text-white">Viagens e Lua de Mel</h6>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 mb-4">
-					<a href="#"><img class="margin-bottom" src="assets/images/computador.jpg" alt="Gallery Image"></a>
-                    <h5 class="py-1" style="border: 1px solid #5bc0de;">Computador: Acer Aspire 5</h5>
-                    <a href="#" class="btn btn-sm btn-secondary disabled my-4">Selecionado</a>
-				</div><!-- col-sm-4 -->
-				<div class="col-md-3 col-sm-6 mb-4">
-					<a href="#"><img class="margin-bottom" src="assets/images/camera.webp" alt="Gallery Image"></a>
-                    <h5 class="py-1" style="border: 1px solid #5bc0de;">Camera: Sony ZV-1</h5>
-                    <a href="#" class="btn btn-sm btn-secondary disabled my-4">Selecionado</a>
-				</div><!-- col-sm-4 -->
-				<div class="col-md-3 col-sm-6 mb-4">
-					<a href="#"><img class="margin-bottom" src="assets/images/monitor.jpg" alt="Gallery Image"></a>
-                    <h5 class="py-1" style="border: 1px solid #5bc0de;">Monitor: HP VH240a Full HD</h5>
-                    <a href="#" class="btn btn-sm btn-secondary disabled my-4">Selecionado</a>
-				</div><!-- col-sm-4 -->
-				<div class="col-md-3 col-sm-6 mb-4">
-					<a href="#"><img class="margin-bottom" src="assets/images/ipad.jpg" alt="Gallery Image"></a>
-                    <h5 class="py-1" style="border: 1px solid #5bc0de;">Tablet: Apple Ipad Air</h5>
-                    <a href="#" class="btn btn-sm btn-secondary my-4">Selecionar</a>
-				</div><!-- col-sm-4 -->
-			</div>
+										<div class="col-md-3 col-sm-6 mb-4">
+						<a href="assets/images/present/1599494819KTHQj0kdFuf27EnE.jpg" data-fluidbox><img class="margin-bottom" src="assets/images/present/1599494819KTHQj0kdFuf27EnE.jpg" alt="Gallery Image"></a>
+	                    <h6 class="py-1 mb-3" style="border: 1px solid #5bc0de;">Champanhe com cesta de frutas</h6>
+	                    	                    	<a href="http://127.0.0.1:8000/cart/add/3" class="btn btn-sm btn-secondary disabled">Selecionado</a>
+	                    					</div><!-- col-sm-4 -->
+										<div class="col-md-3 col-sm-6 mb-4">
+						<a href="assets/images/present/1599494776EqSuUI2yYmMVAx2K.jpg" data-fluidbox><img class="margin-bottom" src="assets/images/present/1599494776EqSuUI2yYmMVAx2K.jpg" alt="Gallery Image"></a>
+	                    <h6 class="py-1 mb-3" style="border: 1px solid #5bc0de;">Jantar romântico</h6>
+	                    	                    	<a href="http://127.0.0.1:8000/cart/add/6" class="btn btn-sm btn-secondary">Selecionar</a>
+	                    					</div><!-- col-sm-4 -->
+								
+						
+												</div>
 
-		</div><!-- container -->
-		<div class="container">
-		    <hr>
-			<div class="row text-left">
-				<div class="col-sm-12 col-md-12 col-lg-6">
-					<div class="margin-bottom display-table">
-						<div class="display-table-cell">
-							<table id="table" class="table table-striped">
-								<thead>
-									<tr>
-										<th>Nome:</th>
-										<th>Quantidade</th>
-										<th>Ações</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Camera: Sony ZV-1</td>
-										<td>1</td>
-										<td>
-											<div class="btn-group btn-group-sm">
-						                        <a href="#" class="btn btn-danger">
-						                        	<i class="fas fa-trash"></i>
-						                        </a>
-						                    </div>
-										</td>
-									</tr>
-									<tr>
-										<td>Liquidificador</td>
-										<td>1</td>
-										<td>
-											<div class="btn-group btn-group-sm">
-						                        <a href="#" class="btn btn-danger">
-						                        	<i class="fas fa-trash"></i>
-						                        </a>
-						                    </div>
-										</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									 <tr><th id="total">Total:</th><td>2</td></tr>
-								</tfoot>
-							</table>
-						</div><!-- display-table-cell -->
-					</div><!-- margin-bottom -->
-				</div><!-- col-sm-6 -->
-
-				<div class="col-sm-12 col-md-12 col-lg-6">
-					<div class="contact-form margin-bottom">
-						<h4 class="pre-title center-text">Confirme a sua identidade!</h4>
-						<form id="form" class="form">
-							<div class="row">
-								<div class="col-sm-12 margin-bottom">
-									<label for="name">Nome:</label>
-									<input type="text" name="name" id="name">
-									<small>Coloque o nome de acordo com o convite</small>
-								</div>
-								<div class="col-sm-12 margin-bottom">
-									<label>Voce estara presente?</label>
-									<select name="is_confirme">
-										<option value="1">SIM</option>
-										<option value="2">NÃO</option>
-									</select>
-								</div>
-								<div class="col-sm-12 margin-bottom">
-									<button class="btn w-100" >Enviar</button>
-								</div>
-							</div>
-						</form>
-					</div><!-- contact-form -->
-				</div><!-- col-sm-6 -->
-				
-			</div><!-- row -->
 		</div><!-- container -->
 	</section><!-- section -->
+	
+	  <input type="hidden" name="total" id="total" value="0">
+	  <a id="cartLink" href="http://127.0.0.1:8000/checkout-presents" title="Presentes selecionados" style="position: fixed; z-index: 2147483647;">
+	  	<i id="cart" class="fa fa-shopping-cart">0</i>
+	  </a>
 	
 	
 	<footer>
@@ -278,7 +202,6 @@
 				</div><!-- email-area -->
 			</div><!-- newsletter -->
 			
-			
 			<ul class="social-icons">
 				<li><a href="#"><i class="icon icon-heart"></i></a></li>
 				<li><a href="#"><i class="icon icon-twitter"></i></a></li>
@@ -293,7 +216,7 @@
 				<li><a href="gallery.html">GALERIA</a></li>
 				<li><a href="messages.html">FELICITAÇÕES</a></li>
 				<li><a href="presence.html">CONFIRMAR PRESENCA</a></li>
-				<li><a href="present.html">PRESENTES</a></li>
+				<li><a href="presents.html">PRESENTES</a></li>
 			</ul>
 			
 			<p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -305,11 +228,29 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
 	
 	
 	<!-- SCIPTS -->
-	<script src="assets/js/jquery-3.1.1.min.js"></script>
-	<script src="assets/js/tether.min.js"></script>
-	<script src="assets/js/bootstrap.js"></script>
-	<script src="assets/js/scripts.js"></script>
+	<script src="/blog-assets/js/jquery.fluidbox.min.js"></script>
+	<script src="/blog-assets/js/scripts.js"></script>
 	<script type="text/javascript">
+		(function( $ ){
+			cartLink = document.getElementById("cartLink");
+			window.onscroll = function() {scrollFunction()};
+			function scrollFunction() {
+			  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					var total = $('#total').val();
+			  		$('a#cartLink i').text(total)
+			    	cartLink.style.display = "block";
+			  } else {
+			    	cartLink.style.display = "none";
+			  }
+			}
+
+			function topFunction() {
+			  document.body.scrollTop = 0; // For Safari
+			  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			} 
+		              
+		})(jQuery);
+	</script>
 		
 	</script>
 	
