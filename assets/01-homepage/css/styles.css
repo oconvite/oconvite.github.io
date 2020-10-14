@@ -556,7 +556,7 @@ header .main-menu li.drop-down a.mouseover+ul.drop-down-menu {
     height: 100vh;
     position: relative;
     z-index: 1;
-    background-image: url(../../images/slider-1-1600x900.jpg);
+    background-image: url(../../images/banner.jpg);
     background-size: cover;
     color: #fff;
 }
